@@ -1,0 +1,40 @@
+  
+  viewPort:{}
+  ...devices[iphone12]
+  ignoreHttpsError:true
+  permissions:[geoLocations]
+  retries: 10,
+  workers:1
+  
+  test.describe.configure({mode:'parallel'})
+  test.describe.configure({mode:'serial'})
+  test.describe.configure({mode:'default'})
+  
+  npx playwright test --config pl.config --project=
+  npx playwright test --grep @API
+  
+  To install allure and check version:
+    (i)npm i -D @playwright/test allure-playwright or npm install -D allure-playwright
+	(ii)allure --version 
+  To generate report along with run
+  npx playwright test --reporter=line,allure-playwright
+  after completion give
+	 allure generate ./allure-results --clean
+	 
+	 allure open ./allure-report
+  
+  
+  
+  Put all in Scripts of package.json
+  
+  scripts:{
+  
+   "test": "npx playwright test test/POM_1.spec.js --headed"
+  
+  Reg:    npx playwright test --config pl.config --project=
+  Smoke:  npx playwright test --grep @API
+  Sanity: npx playwright test --reporter=Line,allure-Playwright
+  
+  }
+  
+  npm playwright reg
