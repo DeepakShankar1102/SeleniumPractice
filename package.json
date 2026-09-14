@@ -1,0 +1,29 @@
+{
+  "name": "playwright_automation_2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test test/POM_1.spec.js --headed",
+    "Smoke": "npx playwright test --grep @POM-5",
+     "Reg":  "npx playwright test --config Playwright.config_1 --project=PR1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.1.0",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.12.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "playwright": "^1.61.1",
+    "playwright-core": "^1.61.1",
+    "undici-types": "^8.3.0"
+  },
+  "description": ""
+}
